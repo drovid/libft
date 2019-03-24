@@ -6,11 +6,11 @@
 /*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/23 13:06:15 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/24 15:11:43 by edbeknaz         ###   ########.fr       */
+/*   Updated: 2019/03/24 15:27:07 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {

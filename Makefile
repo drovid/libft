@@ -60,7 +60,13 @@ FILES = 	ft_atoi \
 			ft_strtrim \
 			ft_tolower \
 			ft_toupper \
-			ft_update
+			ft_update \
+			ft_lstnew \
+			ft_lstdelone \
+			ft_lstdel \
+			ft_lstadd \
+			ft_lstiter \
+			ft_lstmap
 
 SRC = $(addsuffix .c, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))

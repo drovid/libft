@@ -6,7 +6,7 @@
 /*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 17:43:23 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/24 14:50:08 by edbeknaz         ###   ########.fr       */
+/*   Updated: 2019/03/24 15:27:49 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,4 @@ char	*ft_strmap(char const *s, char (*f) (char))
 	}
 	new[i] = '\0';
 	return (new);
-
 }
