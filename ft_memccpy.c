@@ -6,14 +6,14 @@
 /*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/02 21:50:32 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/10 19:59:14 by edbeknaz         ###   ########.fr       */
+/*   Updated: 2019/03/23 13:30:09 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst,
-		const void *restrict src, int c, size_t n)
+void	*ft_memccpy(void *dst,
+		const void *src, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*source;

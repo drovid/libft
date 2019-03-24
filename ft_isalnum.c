@@ -18,14 +18,3 @@ int		ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-int		ft_isalnumstr(char *str)
-{
-	while (*str)
-	{
-		if (!ft_isalnum(*str))
-			return (0);
-		str++;
-	}
-	return (1);
-}

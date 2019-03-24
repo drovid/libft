@@ -11,6 +11,8 @@ FILES = 	ft_atoi \
 			ft_isdigit \
 			ft_isprint \
 			ft_itoa \
+			ft_islower \
+			ft_isupper \
 			ft_memalloc \
 			ft_memccpy \
 			ft_memchr \
@@ -47,7 +49,7 @@ FILES = 	ft_atoi \
 			ft_strncpy \
 			ft_strnequ \
 			ft_strnew \
-			ft_strnsmp \
+			ft_strncmp \
 			ft_strnstr \
 			ft_strrchr \
 			ft_strsplit \
@@ -66,7 +68,7 @@ OBJ = $(addsuffix .o, $(FILES))
 all: $(NAME)
 
 %.o: %.c
-	gcc -c $(CFLAGS) $^ -o $@
+	@gcc -c $(CFLAGS) $^ -o $@
 
 $(NAME): $(OBJ)
 	@ar -rcs $@ $(OBJ)

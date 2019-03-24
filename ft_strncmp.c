@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtolower.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/10 19:41:12 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/10 19:42:06 by edbeknaz         ###   ########.fr       */
+/*   Created: 2019/03/21 16:09:05 by edbeknaz          #+#    #+#             */
+/*   Updated: 2019/03/24 14:47:00 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtolower(char *str)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*new;
-	int		i;
+	size_t i;
 
-	new = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
 	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			new[i] = str[i] + 32;
-		else
-			new[i] = str[i];
-		++i;
-	}
-	new[i] = '\0';
-	return (new);
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] && s1[i] && s2[i] && i < n - 1)
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

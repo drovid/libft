@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtolower.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edbeknaz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/10 19:41:12 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/10 19:42:06 by edbeknaz         ###   ########.fr       */
+/*   Created: 2019/03/23 13:04:43 by edbeknaz          #+#    #+#             */
+/*   Updated: 2019/03/23 13:04:47 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtolower(char *str)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	char	*new;
-	int		i;
-
-	new = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
-	i = 0;
-	while (str[i])
+	if (alst != NULL && new != NULL)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			new[i] = str[i] + 32;
-		else
-			new[i] = str[i];
-		++i;
+		new->next = *alst;
+		*alst = new;
 	}
-	new[i] = '\0';
-	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 17:32:59 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/10 16:49:58 by edbeknaz         ###   ########.fr       */
+/*   Updated: 2019/03/24 14:59:25 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	write(fd, s, i);
 }

@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edbeknaz <edbeknaz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edbeknaz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/02 22:21:28 by edbeknaz          #+#    #+#             */
-/*   Updated: 2019/03/24 14:42:52 by edbeknaz         ###   ########.fr       */
+/*   Created: 2019/03/23 13:55:48 by edbeknaz          #+#    #+#             */
+/*   Updated: 2019/03/23 15:36:00 by edbeknaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_islower(int c)
 {
-	char *tmp;
-
-	tmp = ft_strnew(len);
-	if (tmp)
-	{
-		tmp = ft_memcpy(tmp, src, len);
-		dst = ft_memcpy(dst, tmp, len);
-	}
-	free(tmp);
-	return (dst);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	return (0);
 }
